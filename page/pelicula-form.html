@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Peliculas" />
+    <meta name="author" content="Grupo 3" />
+    <meta name="keywords" content="html, css, bootstrap, js" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/
+bootstrap-icons.css">
+    <title>PELICULAS-FORM</title>
+</head>
+
+<body>
+    <nav class="navbar bg-dark border-bottom border-body navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Popcorns_Rells</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Administrar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="admin.html">Peliculas</a></li>
+                            <li><a class="dropdown-item" href="error404.html">Usuarios</a></li>
+                            <li><a class="dropdown-item" onclick="cerrarSesion()">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="car m-3">
+            <div class="card-header">
+                ALTA DE PELICULAS
+            </div>
+            <div class="card-body">
+                <form id="fmrpeliculas">
+                    <div class="form-group">
+                        <label for="txtIdPelicula">CODIGO</label>
+                        <input type="text" class="form-control" id="txtIdPelicula" value="0" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtIdNombre">NOMBRE</label>
+                        <input type="text" class="form-control" id="txtIdNombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtIdCategoria">CATEGORIA</label>
+                        <input type="text" class="form-control" id="txtIdCategoria">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtIdDescripcion">DESCRIPCION</label>
+                        <input type="text" class="form-control" id="txtIdDescripcion">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtIdPublicado">PUBLICADO</label>
+                        <input type="text" class="form-control" id="txtIdPublicado">
+                    </div>
+                    <div class="form-group">
+                        <label for="cboOpciones">OPCIONES</label>
+                        <select class="form-control" id="cboOpciones">
+                            <option>ACTIVO</option>
+                            <option>INACTIVO</option>
+                        </select>
+                    </div>
+                    <div class="card-footer mt-4">
+                        <button type="button" class="btn btn-success" onclick="guardar()">
+                            GUARDAR</button>
+                        <a href="admin.html" class="btn btn-danger">CANCELAR</a>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/dashboar.js"></script>
+    <script src="../js/peliculas-form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

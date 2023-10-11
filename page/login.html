@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, 
+initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../js/bootstrap.min.js">
+  <title>Login y Register</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body class="boody">
+  <header class="">
+    <div class="menu container sticky-top">
+      <div>
+        <img class="popcorn" src="../image/logo.jpg" alt="logo">
+        <a href="#" class="logo">POPCORNS_RELLS</a>
+      </div>
+      <input type="checkbox" id="menu" />
+      <label for="menu">
+          <img src="../image/menu.png" class="menu-icono" alt="menu">
+      </label>
+      <nav class="navbar" >
+          <ul>
+              <a href="../index.html">Inicio</a>
+              <a href="contactos.html">Contactos</a>
+              <a href="nosotros.html">Nosotros</a>
+          </ul>
+      </nav>
+      <a href="login.html" class="btn-1" id="iniciarSesion">Login</a>
+    </div>
+  </header>
+
+    <main class="main">
+      <div class="contenedor__todo">
+        <div class="caja__trasera my-4">
+          <div class="caja__trasera-login">
+            <h3>¿Ya tienes una cuenta?</h3>
+            <p>Ingresa usuario y contraseña para ingresar.</p>
+            <button id="btn__iniciar-sesion">Ingresar</button>
+          </div>
+          <div class="caja__trasera-register">
+            <h3>¿No tienes una cuenta?</h3>
+            <p>Registrate para acceder a las mejores peliculas.</p>
+            <button id="btn__registrarse">Registrar</button>
+          </div>
+        </div>
+
+        <!--Formulario de Login y register-->
+        <div class="contenedor__login-register">
+          <!--Login-->
+          <form action="" id="formLogin" class="formulario__login" onsubmit="validarUsuario(event)">
+            <h2>Ingresar</h2>
+            <input type="text" placeholder="janedoe@gmail.com" id="inpUser" required>
+            <input type="password" placeholder="contraseña" id="inpContrasenia" required>
+            <button type="submit">Ingresar</button>
+          </form>
+
+          <!--Register-->
+          <form action="" class="formulario__register">
+            <h2>Registrar</h2>
+            <input type="text" placeholder="Jane Doe">
+            <input type="text" placeholder="janedoe@gmail.com">
+            <input type="text" placeholder="janedoe">
+            <input type="password" placeholder="contraseña">
+            <button>Registrar</button>
+          </form>
+        </div>
+      </div>
+
+    </main>
+    <footer class="foooter mt-4 p-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h4 class="text-white">Popcorns_Rells</h4>
+            <img class="popcorn" src="../image/logo.jpg" alt="Logo" >
+          </div>
+          <div class="col-lg-4">
+            <ul>
+              <h4 class="text-white">Contacto</h4>
+              <li><a class="link" href="https://www.facebook.com/?locale=es_LA">Facebook</a></li>
+              <li><a class="link" href="https://www.instagram.com/">Instagram</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h4 class="text-white">Enlaces</h4>
+            <ul>
+              <li><a class="link" href="../index.html">Inicio</a></li>
+              <li><a class="link" href="../page/nosotros.html">Acerca de Nosotros</a></li>
+              <li><a class="link" href="../page/contactos.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-center m-2">Derechos de autor</h4>
+            <p class="text-center m-2">&copy; 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/login.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

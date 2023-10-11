@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Peliculas" />
+    <meta name="author" content="Rosario Alvarez, Marcelo Pereyra, Lucas Blanco" />
+    <meta name="keywords" content="html, css, bootstrap, js" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <title>Administrar Peliculas</title>
+</head>
+
+<body class="admin">
+    <nav class="navbar bg-dark border-bottom border-body navbar-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Popcorns_Rells</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown" id="adminNav">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" id="cerrarSesion">
+                            Administrar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
+                            <li><a class="dropdown-item" href="error404.html">Usuarios</a></li>
+                            <li><a class="dropdown-item" onclick="cerrarSesion()">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h1 class="text-center p-3 mb-3 text-dark">Administración</h1>
+        <div class="">
+            <button type="button" class="btn btn-info m-1" onclick="abrirForm(0)">NUEVO</button>
+            <button type="button" class="btn btn-primary m-1" onclick="listar()">BUSCAR</button>
+            <table class="table table-bordered mt-3" id="tablapeliculas">
+                <thead>
+                    <tr>
+                        <td>CODIGO</td>
+                        <td>NOMBRE</td>
+                        <td>CATEGORIA</td>
+                        <td>DESCRIPCION</td>
+                        <td>PUBLICADO</td>
+                        <td>OPCIONES</td>
+                        <td>ACCIONES</td>
+
+                    </tr>
+                </thead>
+                <tbody id="datapelicula">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/login.js"></script>
+
+</body>
+
+</html>
